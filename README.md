@@ -30,6 +30,8 @@ Steps to attach shader to Image/RawImage component.
 - RadiusY : radius of circle mask, y axis
 - AntialiasThreshold : threshold of antialis width
 
+All of the other properties are derived from Unity's UI/Default shader.
+
 ## Example
 
 See [Assets/Examples](Assets/Examples)

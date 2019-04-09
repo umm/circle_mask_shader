@@ -2,6 +2,8 @@
 
 Circle Mask Shader is mask utility for uGUI Image/RawImage.
 
+![demo](Art/demo_320.gif)
+
 ## Requirement
 
 Development on
@@ -24,7 +26,7 @@ Steps to attach shader to Image/RawImage component.
 
 ![property](./Art/property_small.png)
 
-- RadiusX : radius of circle mask, x axis 
+- RadiusX : radius of circle mask, x axis
 - RadiusY : radius of circle mask, y axis
 - AntialiasThreshold : threshold of antialis width
 
@@ -32,11 +34,8 @@ Steps to attach shader to Image/RawImage component.
 
 See [Assets/Examples](Assets/Examples)
 
-![example](Art/on_off_small.png)
-
 ## License
 
 Copyright (c) 2019 Takuma Maruyama
 
 Released under the MIT license, see [LICENSE.txt](LICENSE.txt)
-

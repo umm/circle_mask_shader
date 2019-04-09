@@ -8,6 +8,7 @@
 /UnityGenerated/
 # Library should not freeze version, it should be written in README.
 /ProjectSettings/ProjectVersion.txt
+/Logs/
 
 # ============= #
 # IDE generated #

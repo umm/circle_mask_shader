@@ -15,6 +15,10 @@ Development on
 yarn add "umm/circle_mask_shader#^1.0.0"
 ```
 
+or simply put a shader file into your project
+
+- [Assets/Shaders/UI-CircleMask.shader](Assets/Shaders/UI-CircleMask.shader)
+
 ## Usage
 
 Steps to attach shader to Image/RawImage component.

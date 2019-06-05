@@ -1,6 +1,6 @@
 {
   "name": "@umm/circle_mask_shader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Circle mask shader for uGUI component",
   "homepage": "https://github.com/umm/circle_mask_shader",
   "bugs": {

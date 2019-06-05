@@ -18,6 +18,9 @@ Shader "UI/CircleMask"
         _RadiusX ("Radius X", Range(0,1)) = 1
         _RadiusY ("Radius Y", Range(0,1)) = 1
         
+        _ScaleX ("Scale X", Float) = 1
+        _ScaleY ("Scale Y", Float) = 1
+
         _AntialiasThreshold ("Antialias Threshold", Range(0, 0.9999)) = 0.96
 
         [Toggle(UNITY_UI_ALPHACLIP)] _UseUIAlphaClip ("Use Alpha Clip", Float) = 0
@@ -84,11 +87,12 @@ Shader "UI/CircleMask"
 
             sampler2D _MainTex;
             fixed4 _Color;
-            fixed4 _TextureSampleAdd;
             float4 _ClipRect;
             float4 _MainTex_ST;
             float _RadiusX;
             float _RadiusY;
+            float _ScaleX;
+            float _ScaleY;
             float _AntialiasThreshold;
 
             float circleDelta(float2 texcoord) {
@@ -116,7 +120,11 @@ Shader "UI/CircleMask"
 
             fixed4 frag(v2f IN) : SV_Target
             {
-                half4 color = (tex2D(_MainTex, IN.texcoord) + _TextureSampleAdd) * IN.color;
+                // scale before circle clipping
+                float2 size = float2(1 / _ScaleX, 1 / _ScaleY);
+                float2 halfSize = size * 0.5;
+                float2 center = float2(0.5, 0.5);
+                half4 color = tex2D(_MainTex, IN.texcoord * size + center - halfSize) * IN.color;
     
                 color.a *= circleDelta(IN.texcoord);
 
